@@ -2,8 +2,10 @@
 #
 # SPDX-License-Identifier: MIT
 """
+`adafruit_bno08x.uart`
+================================================================================
 
-    Subclass of `adafruit_bno08x.BNO08X` to use UART
+Subclass of `adafruit_bno08x.BNO08X` to use UART
 
 """
 import time
@@ -19,10 +21,12 @@ from . import (
 
 
 class BNO08X_UART(BNO08X):
-    """Library for the BNO08x IMUs from Hillcrest Laboratories
+    """Subclass of `adafruit_bno08x.BNO08X` to use UART
 
         :param uart: The UART devce the BNO08x is connected to.
-
+        :param reset: The pin object to use for reset. Defaults to None.
+        :param debug: Enables print statements used for debugging. Defaults to False.
+        :type debug: bool, optional
     """
 
     def __init__(self, uart, reset=None, debug=False):

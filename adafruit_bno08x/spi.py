@@ -2,8 +2,10 @@
 #
 # SPDX-License-Identifier: MIT
 """
+`adafruit_bno08x.spi`
+================================================================================
 
-    Subclass of `adafruit_bno08x.BNO08X` to use SPI
+Subclass of `adafruit_bno08x.BNO08X` to use SPI
 
 """
 import time
@@ -15,20 +17,17 @@ from . import BNO08X, DATA_BUFFER_SIZE, _elapsed, Packet, PacketError
 
 
 class BNO08X_SPI(BNO08X):
-    """Instantiate a `adafruit_bno08x.BNO08X_SPI` instance to communicate with
-    the sensor using SPI
+    """Subclass of `adafruit_bno08x.BNO08X` to use SPI
 
-    Args:
-        spi_bus ([busio.SPI]): The SPI bus to use to communicate with the BNO08x
-        cs_pin ([digitalio.DigitalInOut]): The pin object to use for the SPI Chip Select
-        debug (bool, optional): Enables print statements used for debugging. Defaults to False.
+        :param spi_bus: The SPI bus the BNO08x is connected to.
+        :param cspin: The pin object to use for the SPI Chip Select.
+        :param intpin: The pin object to use for interupt.
+        :param resetpin: The pin object to use for reset. Defaults to None.
+        :param baudrate: Baudrate to use. Defaults to 1000000.
+        :type baudrate: int, optional
+        :param debug: Enables print statements used for debugging. Defaults to False.
+        :type debug: bool, optional
     """
-
-    # """Library for the BNO08x IMUs from Hillcrest Laboratories
-
-    #     :param ~busio.SPI spi_bus: The SPI bus the BNO08x is connected to.
-
-    # """
 
     def __init__(
         self, spi_bus, cspin, intpin, resetpin, baudrate=1000000, debug=False

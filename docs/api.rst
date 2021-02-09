@@ -6,3 +6,15 @@
 
 .. automodule:: adafruit_bno08x
    :members:
+
+.. automodule:: adafruit_bno08x.debug
+   :members:
+
+.. automodule:: adafruit_bno08x.i2c
+   :members:
+
+.. automodule:: adafruit_bno08x.spi
+   :members:
+
+.. automodule:: adafruit_bno08x.uart
+   :members:

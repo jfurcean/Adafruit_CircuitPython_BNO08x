@@ -2,8 +2,10 @@
 #
 # SPDX-License-Identifier: MIT
 """
+`adafruit_bno08x.i2c`
+================================================================================
 
-    Subclass of `adafruit_bno08x.BNO08X` to use I2C
+Subclass of `adafruit_bno08x.BNO08X` to use I2C
 
 """
 from struct import pack_into
@@ -14,10 +16,14 @@ _BNO08X_DEFAULT_ADDRESS = const(0x4A)
 
 
 class BNO08X_I2C(BNO08X):
-    """Library for the BNO08x IMUs from Hillcrest Laboratories
+    """BNO08x subclass to communicate with the sensor using I2C
 
-        :param ~busio.I2C i2c_bus: The I2C bus the BNO08x is connected to.
-
+        :param i2c_bus: The I2C bus the BNO08x is connected to.
+        :param reset: The pin object to use for reset. Defaults to None.
+        :param address: The I2C address of the device. Default is 0x4A.
+        :type address: int, optional
+        :param debug: Enables print statements used for debugging. Defaults to False.
+        :type debug: bool, optional
     """
 
     def __init__(

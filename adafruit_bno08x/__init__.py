@@ -478,8 +478,9 @@ class Packet:
 class BNO08X:  # pylint: disable=too-many-instance-attributes, too-many-public-methods
     """Library for the BNO08x IMUs from Hillcrest Laboratories
 
-        :param ~busio.I2C i2c_bus: The I2C bus the BNO08x is connected to.
-
+        :param reset: The pin object to use for reset. Defaults to None.
+        :param debug: Enables print statements used for debugging. Defaults to False.
+        :type debug: bool, optional
     """
 
     def __init__(self, reset=None, debug=False):

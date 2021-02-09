@@ -1,7 +1,13 @@
 # SPDX-FileCopyrightText: Copyright (c) 2020 Bryan Siepert for Adafruit Industries
 #
 # SPDX-License-Identifier: MIT
-"""A collection of dictionaries for better debug messages"""
+"""
+`adafruit_bno08x.debug`
+================================================================================
+
+A collection of dictionaries for better debug messages
+
+"""
 # TODO: Remove for size before release
 channels = {
     0x0: "SHTP_COMMAND",

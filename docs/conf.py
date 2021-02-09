@@ -21,7 +21,13 @@ extensions = [
     "sphinx.ext.todo",
 ]
 
-autodoc_mock_imports = ["busio", "micropython", "struct"]
+autodoc_mock_imports = [
+    "busio",
+    "digitalio",
+    "micropython",
+    "struct",
+    "adafruit_bus_device",
+]
 
 
 intersphinx_mapping = {
